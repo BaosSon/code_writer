@@ -1,0 +1,1 @@
+input("nhap bat ki:")
