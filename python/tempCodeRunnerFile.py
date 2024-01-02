@@ -1,1 +1,0 @@
-input("nhap bat ki:")
