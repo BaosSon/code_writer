@@ -3,6 +3,7 @@ import 'package:untitled/appbar/appbar.dart';
 import 'package:untitled/navigation/bottom.dart';
 import 'home.dart';
 import 'notifications.dart';
+import 'MAP.dart';
 import 'messages.dart';
 
 void main() {
@@ -29,7 +30,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
   final pages = [
     HomePage(),
-    NotificationsPage(),
+    MAP(),
     MessagesPage(),
   ];
 
