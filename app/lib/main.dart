@@ -1,52 +1,35 @@
 import 'package:flutter/material.dart';
 import 'package:untitled/appbar/appbar.dart';
 import 'package:untitled/navigation/bottom.dart';
-import 'home.dart';
-import 'notifications.dart';
-import 'MAP.dart';
-import 'messages.dart';
-
-void main() {
-  runApp(MyApp());
+import 'style.dart';
+void main(){
+  runApp(const MyApp());
 }
-
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      // debugShowCheckedModeBanner: false,
-      home: MyHomePage(),
-    );
-  }
-}
-
-class MyHomePage extends StatefulWidget {
-  @override
-  _MyHomePageState createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
-  int currentPageIndex = 0;
-
-  final pages = [
-    HomePage(),
-    MAP(),
-    MessagesPage(),
-  ];
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(title: MyAppBar()),
-      body: pages[currentPageIndex],
-      bottomNavigationBar: MyBottomNavigationBar(
-        onTap: (int index) {
-          setState(() {
-            currentPageIndex = index;
-          });
+      home: Builder(
+        builder: (context) {
+          return Scaffold(
+              appBar: AppBar(
+                  title:const MyAppBar()),
+              body: const MyBody(),
+              bottomNavigationBar: MyBottomNavigationBar(),
+          );
         },
-        currentIndex: currentPageIndex,
       ),
     );
   }
 }
+
+
+class MyBody extends StatelessWidget {
+const MyBody({super.key});
+  @override
+  Widget build(BuildContext context) {
+    return const Text('This is the body',style:lol);
+  }
+}
+
