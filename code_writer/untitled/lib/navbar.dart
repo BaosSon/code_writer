@@ -7,10 +7,9 @@ class  Navbar extends StatelessWidget {
     return  Drawer(
       child: ListView(
         children: [
-        UserAccountsDrawerHeader(accountName: Text('sổ tay sinh viên'), accountEmail:Text('Trường đại học thủ dầu một')),
           ListTile(
-            leading:const Icon(Icons.ac_unit_sharp),
-            title: const Text('Seting'),
+            leading: Icon(Icons.ac_unit_sharp),
+            title: Text('Seting'),
             onTap: () => print("tapped"),
           )
         ],
