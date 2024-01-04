@@ -1,19 +1,3 @@
-// import 'package:flutter/material.dart';
-// import '../style.dart';
-//
-// class MyAppBar extends StatelessWidget {
-//   @override
-//   Widget build(BuildContext context) {
-//     return AppBar(title: Text('My App',style: lol),
-//       centerTitle: true,
-//       backgroundColor: Color.blue,
-//       elevation: 0,
-//       iconTheme: IconThemeData(
-//         color: Color.white,
-//       ),
-//     );
-//   }
-// }
 import 'package:flutter/material.dart';
 import '../style.dart';
 
@@ -39,7 +23,6 @@ class MyAppBar extends StatelessWidget {
           IconButton(
             icon: const Icon(Icons.menu),
             onPressed: () {
-              // Hành động khi nhấp vào biểu tượng menu
             },
           ),
           const Text(
@@ -49,7 +32,6 @@ class MyAppBar extends StatelessWidget {
           IconButton(
             icon: const Icon(Icons.search),
             onPressed: () {
-              // Hành động khi nhấp vào biểu tượng tìm kiếm
             },
           ),
         ],
