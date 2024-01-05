@@ -1,7 +1,15 @@
 import 'package:flutter/material.dart';
-
-const TextStyle lol=TextStyle(
-  fontSize: 35,
+class nope extends Container{
+  nope({Widget? child}):
+    super(
+      padding: EdgeInsets.zero,
+      margin: EdgeInsets.zero,
+      child: child,
+    );
+}
+final ab_text =TextStyle(
+ fontSize: 35,
+  fontStyle: FontStyle.italic,
   color: Colors.blueAccent,
-  fontStyle: FontStyle.italic
 );
+ 
