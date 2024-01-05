@@ -7,9 +7,9 @@ class nope extends Container{
       child: child,
     );
 }
-final ab_text =TextStyle(
+const ab_text =TextStyle(
  fontSize: 35,
   fontStyle: FontStyle.italic,
-  color: Colors.blueAccent,
+  color: Colors.white,
 );
  

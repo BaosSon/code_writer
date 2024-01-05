@@ -4,7 +4,8 @@ import 'package:untitled/navigation/bottom.dart';
 import 'home.dart';
 import 'map/MAP.dart';
 import 'CLB/CLB.dart';
-void main(){
+
+void main() {
   runApp(MyApp());
 }
 
@@ -35,7 +36,7 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const MyAppBar()),
+      appBar: MyAppBar(),
       body: pages[currentPageIndex],
       bottomNavigationBar: MyBottomNavigationBar(
         onTap: (int index) {
