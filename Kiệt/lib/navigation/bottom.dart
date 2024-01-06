@@ -24,15 +24,19 @@ class _MyBottomNavigationBarState extends State<MyBottomNavigationBar> {
           label: 'Home',
         ),
         NavigationDestination(
-          icon: Badge(child: Icon(Icons.notifications_sharp)),
-          label: 'Notifications',
+          selectedIcon: Icon(Icons.map),
+          icon: Icon(Icons.map_outlined),
+          label: 'Map',
         ),
         NavigationDestination(
-          icon: Badge(
-            label: Text('2'),
-            child: Icon(Icons.messenger_sharp),
-          ),
-          label: 'Messages',
+          selectedIcon: Icon(Icons.people),
+          icon: Icon(Icons.people_outline),
+          label: 'CLB',
+        ),
+        NavigationDestination(
+          selectedIcon: Icon(Icons.info),
+          icon: Icon(Icons.info_outline),
+          label: 'Into',
         ),
       ],
     );

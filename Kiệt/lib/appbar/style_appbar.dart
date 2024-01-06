@@ -9,7 +9,6 @@ class nope extends Container{
 }
 const ab_text =TextStyle(
  fontSize: 35,
-  fontStyle: FontStyle.italic,
-  color: Colors.white,
+color: Colors.white,
 );
  

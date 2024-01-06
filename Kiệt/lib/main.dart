@@ -4,6 +4,7 @@ import 'package:untitled/navigation/bottom.dart';
 import 'home.dart';
 import 'map/MAP.dart';
 import 'CLB/CLB.dart';
+import 'info/info.dart';
 
 void main() {
   runApp(MyApp());
@@ -31,6 +32,7 @@ class _MyHomePageState extends State<MyHomePage> {
     HomePage(),
     Map(),
     CLB(),
+    Info(),
   ];
 
   @override
