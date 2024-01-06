@@ -10,7 +10,6 @@
 // }
 //import 'dart:io';
 import 'package:flutter/material.dart';
-import 'package:untitled/style.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
