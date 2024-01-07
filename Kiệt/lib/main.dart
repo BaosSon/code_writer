@@ -31,7 +31,7 @@ class _MyHomePageState extends State<MyHomePage> {
   final pages = [
     HomePage(),
     Map(),
-    CLB(),
+    CLB_show(),
     Info(),
   ];
 

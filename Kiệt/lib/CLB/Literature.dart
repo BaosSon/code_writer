@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
-class IT extends StatelessWidget {
+class Literature extends StatelessWidget {
   final ValueNotifier<int> currentPageIndex;
 
-  IT({required this.currentPageIndex});
+  Literature({required this.currentPageIndex});
 
   @override
   Widget build(BuildContext context) {
@@ -15,7 +15,7 @@ class IT extends StatelessWidget {
             currentPageIndex.value = 0; 
           },
         ),
-        title: Text('IT'),
+        title: Text('Literature'),
       ),
       body: Center(child: Text('LOL'),)
     );
