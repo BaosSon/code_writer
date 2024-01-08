@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'style_CLB.dart';
 import 'IT.dart';
 import 'Drama.dart';
 import 'Literature.dart';
@@ -12,11 +13,11 @@ class _CLB_showState extends State<CLB_show> {
   final currentPageIndex = ValueNotifier<int>(0);
 
   List<Widget> get pages => [
-    CLB(currentPageIndex: currentPageIndex),
-    IT(currentPageIndex: currentPageIndex),
-    Literature(currentPageIndex: currentPageIndex),
-    Drama(currentPageIndex: currentPageIndex),
-  ];
+        CLB(currentPageIndex: currentPageIndex),
+        IT(currentPageIndex: currentPageIndex),
+        Literature(currentPageIndex: currentPageIndex),
+        Drama(currentPageIndex: currentPageIndex),
+      ];
 
   @override
   Widget build(BuildContext context) {
@@ -31,69 +32,44 @@ class _CLB_showState extends State<CLB_show> {
   }
 }
 
-
 class CLB extends StatelessWidget {
   final ValueNotifier<int> currentPageIndex;
   CLB({required this.currentPageIndex});
   @override
   Widget build(BuildContext context) {
     return ListView(children: <Widget>[
-  GestureDetector(
-  onTap: () => currentPageIndex.value = 1,
-  child: Card(
-    child: ListTile(
-      leading: Container(
-        padding: EdgeInsets.all(0),
-        margin: EdgeInsets.all(1),
-        decoration: BoxDecoration(
-          border: Border.all(color: Colors.blue, width: 1.0),
-          borderRadius: BorderRadius.circular(10),
+      GestureDetector(
+        onTap: () => currentPageIndex.value = 1,
+        child: Card(
+          child: ListTile(
+            leading: bd(child: Image.asset('image/logo.png')),
+            title: Text('Câu lập bộ IT'),
+            subtitle: Text('Lập trình cả thế giới'),
+          ),
         ),
-        child: Image.asset('../image/logo.png'),
       ),
-      title: Text('Câu lập bộ IT'),
-      subtitle: Text('Tôi chưa biết nên viết gì ở đây nữa'),
-    ),
-  ),
-),
 // ------
       GestureDetector(
-  onTap: () => currentPageIndex.value = 2,
-  child: Card(
-    child: ListTile(
-      leading: Container(
-        padding: EdgeInsets.all(0),
-        margin: EdgeInsets.all(1),
-        decoration: BoxDecoration(
-          border: Border.all(color: Colors.blue, width: 1.0),
-          borderRadius: BorderRadius.circular(10),
+        onTap: () => currentPageIndex.value = 2,
+        child: Card(
+          child: ListTile(
+            leading: bd(child: Image.asset('image/logo.png')),
+            title: Text('Câu lập bộ Văn học'),
+            subtitle: Text('Chắc chắc không có Monika'),
+          ),
         ),
-        child: Image.asset('../image/logo.png'),
       ),
-      title: Text('Câu lập bộ Văn học'),
-      subtitle: Text('Tôi chưa biết nên viết gì ở đây nữa'),
-    ),
-  ),
-),
 // ------
       GestureDetector(
-  onTap: () => currentPageIndex.value = 3,
-  child: Card(
-    child: ListTile(
-      leading: Container(
-        padding: EdgeInsets.all(0),
-        margin: EdgeInsets.all(1),
-        decoration: BoxDecoration(
-          border: Border.all(color: Colors.blue, width: 1.0),
-          borderRadius: BorderRadius.circular(10),
+        onTap: () => currentPageIndex.value = 3,
+        child: Card(
+          child: ListTile(
+            leading: bd(child: Image.asset('image/logo.png')),
+            title: Text('Câu lập bộ Kịch'),
+            subtitle: Text('Vì một lá phổi khỏe mạnh, hãy hít drama'),
+          ),
         ),
-        child: Image.asset('../image/logo.png'),
       ),
-      title: Text('Câu lập bộ Kịch'),
-      subtitle: Text('Tôi chưa biết nên viết gì ở đây nữa'),
-    ),
-  ),
-),
 // ------
     ]);
   }

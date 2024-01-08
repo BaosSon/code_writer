@@ -4,7 +4,7 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: Image.asset('../image/school.jpg'),
+      child: Image.asset('image/school.jpg'),
     );
   }
 }

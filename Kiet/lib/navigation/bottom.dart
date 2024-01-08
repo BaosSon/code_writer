@@ -15,7 +15,7 @@ class _MyBottomNavigationBarState extends State<MyBottomNavigationBar> {
   Widget build(BuildContext context) {
     return NavigationBar(
       onDestinationSelected: widget.onTap,
-      indicatorColor: Colors.blue,
+      indicatorColor: Color.fromARGB(255, 0, 183, 255),
       selectedIndex: widget.currentIndex,
       destinations: const <Widget>[
         NavigationDestination(
