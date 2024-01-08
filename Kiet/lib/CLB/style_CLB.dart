@@ -16,3 +16,17 @@ class bd extends StatelessWidget {
     );
   }
 }
+
+class Logo extends StatelessWidget {
+  final String imagePath;
+  Logo({required this.imagePath});
+  @override
+  Widget build(BuildContext context) {
+    double Width = MediaQuery.of(context).size.width/2;
+    return Container(
+      width: Width ,
+      height: Width ,
+      child: Image.asset(imagePath),
+    );
+  }
+}

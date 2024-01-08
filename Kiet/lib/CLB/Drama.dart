@@ -15,11 +15,11 @@ class Drama extends StatelessWidget {
               currentPageIndex.value = 0;
             },
           ),
-          title: Text('IT')),
+          title: Text('Drama')),
       body: ListView(
         children: <Widget>[
           // Logo
-          bd(child:Image.asset('image/logo.png')),
+          Center(child:bd(child:Logo(imagePath: 'image/logo.png'))),
 
           // Facebook
           ListTile(
