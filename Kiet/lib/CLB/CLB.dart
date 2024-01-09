@@ -52,7 +52,7 @@ class CLB extends StatelessWidget {
         onTap: () => currentPageIndex.value = 1,
         child: Card(
           child: ListTile(
-            leading: bd(child: Image.asset('image/logo.png')),
+            leading: bd(child: Image.asset('image/logo.jpg')),
             title: Text('Câu lập bộ IT'),
             subtitle: Text('Lập trình cả thế giới'),
           ),
@@ -63,7 +63,7 @@ class CLB extends StatelessWidget {
         onTap: () => currentPageIndex.value = 2,
         child: Card(
           child: ListTile(
-            leading: bd(child: Image.asset('image/logo.png')),
+            leading: bd(child: Image.asset('image/logo.jpg')),
             title: Text('Câu lập bộ Văn học'),
             subtitle: Text('Chắc chắc không có Monika'),
           ),
@@ -74,7 +74,7 @@ class CLB extends StatelessWidget {
         onTap: () => currentPageIndex.value = 3,
         child: Card(
           child: ListTile(
-            leading: bd(child: Image.asset('image/logo.png')),
+            leading: bd(child: Image.asset('image/logo.jpg')),
             title: Text('Câu lập bộ Kịch'),
             subtitle: Text('Vì một lá phổi khỏe mạnh, hãy hít drama'),
           ),

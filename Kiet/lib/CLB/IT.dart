@@ -20,14 +20,14 @@ class IT extends StatelessWidget {
       body: ListView(
         children: <Widget>[
           // Logo
-          Center(child:bd(child:Logo(imagePath: 'image/logo.png'))),
+          Center(child: bd(child: Logo(imagePath: 'image/logo.jpg'))),
 
           // Facebook
           ListTile(
             leading: Icon(Icons.facebook),
             title: Text('Facebook'),
             // onTap: () {
-              
+
             // },
           ),
 
@@ -35,21 +35,21 @@ class IT extends StatelessWidget {
           ListTile(
             leading: Icon(Icons.phone),
             title: Text('Contact Number'),
-            subtitle:
-                Text('Contact number'),
+            subtitle: Text('Contact number'),
           ),
 
           // Club leader
           ListTile(
             leading: Icon(Icons.person),
             title: Text('Club Leader'),
-            subtitle: Text('Name of the club leader'), 
+            subtitle: Text('Name of the club leader'),
           ),
 
           // Short introduction
           Padding(
             padding: const EdgeInsets.all(8.0),
-            child: Text('Short introduction',
+            child: Text(
+              'Short introduction',
               style: TextStyle(fontSize: 20),
             ),
           ),
@@ -57,7 +57,7 @@ class IT extends StatelessWidget {
           // Activities
           ListTile(
             title: Text('Activities'),
-            subtitle: Text('Description of activities'), 
+            subtitle: Text('Description of activities'),
           ),
 
           // Achievements
