@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../setting/setting.dart';
 
 class Navbar extends StatelessWidget {
   const Navbar({super.key});
@@ -12,9 +13,9 @@ class Navbar extends StatelessWidget {
               accountName: Text('sổ tay sinh viên'),
               accountEmail: Text('Trường đại học thủ dầu một')),
           ListTile(
-            leading: const Icon(Icons.ac_unit_sharp),
+            leading: const Icon(Icons.settings),
             title: const Text('Seting'),
-            onTap: () => print("tapped"),
+            onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context)=>SettingsPage())),
           ),
           ListTile(
             leading: const Icon(Icons.logout),
