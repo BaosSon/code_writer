@@ -5,6 +5,7 @@ import 'Home/home.dart';
 import 'map/MAP.dart';
 import 'CLB/CLB.dart';
 import 'info/info.dart';
+import 'appbar/navbar.dart';
 
 void main() {
   runApp(MyApp());
@@ -38,6 +39,7 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      drawer: Navbar(),
       appBar: MyAppBar(),
       body: PageView(
         controller: pageController,
