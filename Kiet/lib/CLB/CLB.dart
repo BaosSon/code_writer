@@ -25,7 +25,17 @@ class _CLB_showState extends State<CLB_show> {
       valueListenable: currentPageIndex,
       builder: (context, value, child) {
         return Scaffold(
-          body: pages[value],
+          body: AnimatedSwitcher(
+            duration: Duration(milliseconds: 300),
+            transitionBuilder: (Widget child, Animation<double> animation) {
+              return SlideTransition(
+                child: child,
+                position: animation.drive(
+                  Tween(begin: Offset(1.0, 0.0), end: Offset.zero)),
+              );
+            },
+            child: pages[currentPageIndex.value],
+          ),
         );
       },
     );
