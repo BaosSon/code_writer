@@ -27,11 +27,11 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   int currentPageIndex = 0;
-
+  final pageController = PageController();
   final pages = [
     HomePage(),
     Map(),
-    CLB(),
+    CLB_show(),
     Info(),
   ];
 
@@ -39,12 +39,20 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: MyAppBar(),
-      body: pages[currentPageIndex],
+      body: PageView(
+        controller: pageController,
+        onPageChanged: (index) => setState(() => currentPageIndex = index),
+        children: pages
+            .map((page) => Align(alignment: Alignment.topCenter, child: page))
+            .toList(),
+      ),
       bottomNavigationBar: MyBottomNavigationBar(
-        onTap: (int index) {
-          setState(() {
-            currentPageIndex = index;
-          });
+        onTap: (index) {
+          pageController.animateToPage(
+            index,
+            duration: Duration(milliseconds: 300),
+            curve: Curves.easeInOut,
+          );
         },
         currentIndex: currentPageIndex,
       ),
