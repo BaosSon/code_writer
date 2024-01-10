@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../theme/theme.dart';
 import 'style_CLB.dart';
 class Drama extends StatelessWidget {
   final ValueNotifier<int> currentPageIndex;
@@ -19,7 +20,7 @@ class Drama extends StatelessWidget {
       body: ListView(
         children: <Widget>[
           // Logo
-          Center(child:bd(child:Logo(imagePath: 'image/logo.png'))),
+          Center(child:bd(child:Logo(imagePath: 'image/logo.jpg'))),
 
           // Facebook
           ListTile(
@@ -48,9 +49,7 @@ class Drama extends StatelessWidget {
           // Short introduction
           Padding(
             padding: const EdgeInsets.all(8.0),
-            child: Text('Short introduction',
-              style: TextStyle(fontSize: 20),
-            ),
+            child:ThemeText(text:'Short introduction'),
           ),
 
           // Activities

@@ -25,7 +25,7 @@ class SettingsPage extends StatelessWidget {
       body: ListView(
         children: [
           SwitchListTile(title: Text('Dark Theme'), value: settings.isDarkTheme, onChanged: settings.toggleTheme),
-          Slider(value: settings.fontSize, min: 10, max: 22, divisions: 4, onChanged: settings.adjustFontSize),
+          Slider(value: settings.fontSize, min: 14, max: 30, divisions: 6, onChanged: settings.adjustFontSize),
           ListTile(title: Text('Contact Us'), onTap: () {}),
         ],
       ),

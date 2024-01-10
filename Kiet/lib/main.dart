@@ -22,10 +22,10 @@ class MyApp extends StatelessWidget {
           debugShowCheckedModeBanner: false,
           theme: Light.copyWith(
               textTheme:
-                  TextTheme(bodyText2: TextStyle(fontSize: settings.fontSize))),
+                  TextTheme(bodyMedium: TextStyle(fontSize: settings.fontSize))),
           darkTheme: Dark.copyWith(
               textTheme:
-                  TextTheme(bodyText2: TextStyle(fontSize: settings.fontSize))),
+                  TextTheme(bodyMedium: TextStyle(fontSize: settings.fontSize))),
           themeMode: settings.isDarkTheme ? ThemeMode.dark : ThemeMode.light,
           home: MyHomePage(),
         );
