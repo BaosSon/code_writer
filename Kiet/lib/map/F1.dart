@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-
-class E1 extends StatelessWidget {
+export 'F2.dart';
+class F1 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Center(child: Text('A1'));

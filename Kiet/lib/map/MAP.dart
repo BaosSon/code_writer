@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'A/A1.dart';
+import 'place.dart';
+
 
 class Map extends StatelessWidget {
   @override
