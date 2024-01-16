@@ -35,15 +35,15 @@ class HomePage extends StatelessWidget {
                 ),
                 OptionCard(
                   icon: Icons.grid_view,
-                  card_text: ThemeText(text: 'Gợi ý'),
+                  card_text: ThemeText(text:'Gợi ý'),
                 ),
                 OptionCard(
                   icon: Icons.propane_tank,
-                  card_text: ThemeText(text: 'Đề xuất'),
+                  card_text: ThemeText(text:'Đề xuất' ),
                 ),
                 OptionCard(
                   icon: Icons.newspaper,
-                  card_text: ThemeText(text: 'Mới nhất'),
+                  card_text: ThemeText(text:'Mới nhất' ),
                 ),
               ],
             ),
@@ -56,7 +56,7 @@ class HomePage extends StatelessWidget {
 
 class OptionCard extends StatelessWidget {
   final IconData icon;
-  final ThemeText card_text;
+  final ThemeText card_text; 
 
   const OptionCard({required this.icon, required this.card_text});
 
@@ -75,7 +75,7 @@ class OptionCard extends StatelessWidget {
               size: 48,
             ),
             const SizedBox(height: 8),
-            card_text,
+            card_text, 
           ],
         ),
       ),

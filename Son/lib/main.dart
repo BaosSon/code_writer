@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'appbar/appbar.dart';
-import 'package:untitled/navigation/bottom.dart';
+import 'package:TDMU/navigation/bottom.dart';
 import 'Home/home.dart';
 import 'map/MAP.dart';
 import 'CLB/CLB.dart';
