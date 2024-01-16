@@ -35,15 +35,15 @@ class HomePage extends StatelessWidget {
                 ),
                 OptionCard(
                   icon: Icons.grid_view,
-                  title: 'Câu lạc bộ',
+                  title: 'Gợi ý',
                 ),
                 OptionCard(
-                  icon: Icons.location_on,
-                  title: 'Địa điểm 1',
+                  icon: Icons.propane_tank,
+                  title: 'Đề xuất',
                 ),
                 OptionCard(
-                  icon: Icons.location_on,
-                  title: 'Địa điểm 2',
+                  icon: Icons.newspaper,
+                  title: 'Mới nhất',
                 ),
               ],
             ),
@@ -79,6 +79,7 @@ class OptionCard extends StatelessWidget {
               title,
               style: TextStyle(
                 fontSize: 16,
+                color: Colors.blueGrey,
                 fontWeight: FontWeight.bold,
               ),
             ),
