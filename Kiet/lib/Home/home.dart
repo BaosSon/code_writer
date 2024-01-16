@@ -31,19 +31,19 @@ class HomePage extends StatelessWidget {
               [
                 OptionCard(
                   icon: Icons.info,
-                  title: 'Thông tin',
+                  card_text: ThemeText(text: 'Thông tin của bạn'),
                 ),
                 OptionCard(
                   icon: Icons.grid_view,
-                  title: 'Câu lạc bộ',
+                  card_text: ThemeText(text:'Câu lạc bộ'),
                 ),
                 OptionCard(
                   icon: Icons.location_on,
-                  title: 'Địa điểm 1',
+                  card_text: ThemeText(text:'Địa điểm 1' ),
                 ),
                 OptionCard(
                   icon: Icons.location_on,
-                  title: 'Địa điểm 2',
+                  card_text: ThemeText(text:'Địa điểm 2' ),
                 ),
               ],
             ),
@@ -56,9 +56,9 @@ class HomePage extends StatelessWidget {
 
 class OptionCard extends StatelessWidget {
   final IconData icon;
-  final String title;
+  final ThemeText card_text; 
 
-  const OptionCard({required this.icon, required this.title});
+  const OptionCard({required this.icon, required this.card_text});
 
   @override
   Widget build(BuildContext context) {
@@ -75,13 +75,7 @@ class OptionCard extends StatelessWidget {
               size: 48,
             ),
             const SizedBox(height: 8),
-            Text(
-              title,
-              style: TextStyle(
-                fontSize: 16,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
+            card_text, 
           ],
         ),
       ),
