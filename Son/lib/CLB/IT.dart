@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'style_CLB.dart';
+import '../theme/theme.dart';
 
 class IT extends StatelessWidget {
   final ValueNotifier<int> currentPageIndex;
-
   IT({required this.currentPageIndex});
 
   @override
@@ -48,10 +48,7 @@ class IT extends StatelessWidget {
           // Short introduction
           Padding(
             padding: const EdgeInsets.all(8.0),
-            child: Text(
-              'Short introduction',
-              style: TextStyle(fontSize: 20),
-            ),
+            child:ThemeText(text:'Short introduction'),
           ),
 
           // Activities

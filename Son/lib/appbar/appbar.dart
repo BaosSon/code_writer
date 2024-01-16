@@ -8,12 +8,12 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
   Widget build(BuildContext context) {
     return AppBar(
       backgroundColor: Color.fromARGB(255, 0, 183, 255),
-      // leading: IconButton(
-      //   tooltip: MaterialLocalizations.of(context).openAppDrawerTooltip,
-      //   icon: const Icon(Icons.menu),
-      //   color: Colors.white,
-      //   onPressed: () {},
-      // ),
+      leading: IconButton(
+        tooltip: MaterialLocalizations.of(context).openAppDrawerTooltip,
+        icon: const Icon(Icons.menu),
+        color: Colors.white,
+        onPressed: () => Scaffold.of(context).openDrawer(),
+      ),
       title: const Text(
         'Sổ tay sinh viên',
         style: ab_text,
