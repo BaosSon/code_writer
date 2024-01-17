@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../theme/theme.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -30,19 +31,19 @@ class HomePage extends StatelessWidget {
               [
                 OptionCard(
                   icon: Icons.info,
-                  title: 'Thông tin',
+                  card_text: ThemeText(text: 'Thông tin',size:20),
                 ),
                 OptionCard(
                   icon: Icons.grid_view,
-                  title: 'Câu lạc bộ',
+                  card_text: ThemeText(text:'Gợi ý',size:20),
                 ),
                 OptionCard(
-                  icon: Icons.location_on,
-                  title: 'Địa điểm 1',
+                  icon: Icons.propane_tank,
+                  card_text: ThemeText(text:'Đề xuất' ,size:20),
                 ),
                 OptionCard(
-                  icon: Icons.location_on,
-                  title: 'Địa điểm 2',
+                  icon: Icons.newspaper,
+                  card_text: ThemeText(text:'Mới nhất' ,size:20),
                 ),
               ],
             ),
@@ -55,9 +56,9 @@ class HomePage extends StatelessWidget {
 
 class OptionCard extends StatelessWidget {
   final IconData icon;
-  final String title;
+  final ThemeText card_text; 
 
-  const OptionCard({required this.icon, required this.title});
+  const OptionCard({required this.icon, required this.card_text});
 
   @override
   Widget build(BuildContext context) {
@@ -74,13 +75,7 @@ class OptionCard extends StatelessWidget {
               size: 48,
             ),
             const SizedBox(height: 8),
-            Text(
-              title,
-              style: TextStyle(
-                fontSize: 16,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
+            card_text, 
           ],
         ),
       ),

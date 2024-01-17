@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'style_appbar.dart';
+import 'search.dart';
 
 class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
   const MyAppBar({Key? key}) : super(key: key);
@@ -24,7 +25,7 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
           icon: const Icon(Icons.search),
           tooltip: 'Search',
           color: Colors.white,
-          onPressed: () {},
+          onPressed: () {showSearch(context: context, delegate: Search());},
         ),
       ],
     );

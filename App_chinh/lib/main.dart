@@ -1,22 +1,34 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import 'appbar/appbar.dart';
-import 'package:untitled/navigation/bottom.dart';
+import 'navigation/bottom.dart';
 import 'Home/home.dart';
 import 'map/MAP.dart';
 import 'CLB/CLB.dart';
 import 'info/info.dart';
 import 'appbar/navbar.dart';
+import 'setting/setting.dart';
+import 'theme/theme.dart';
 
-void main() {
-  runApp(MyApp());
-}
+void main() =>runApp(ChangeNotifierProvider(create: (_) => Settings(), child: MyApp()));
 
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: MyHomePage(),
+    return Consumer<Settings>(
+      builder: (context, settings, child) {
+        return MaterialApp(
+          debugShowCheckedModeBanner: false,
+          theme: Light.copyWith(
+              textTheme:
+                  TextTheme(bodyMedium: TextStyle(fontSize: settings.fontSize))),
+          darkTheme: Dark.copyWith(
+              textTheme:
+                  TextTheme(bodyMedium: TextStyle(fontSize: settings.fontSize))),
+          themeMode: settings.isDarkTheme ? ThemeMode.dark : ThemeMode.light,
+          home: MyHomePage(),
+        );
+      },
     );
   }
 }
