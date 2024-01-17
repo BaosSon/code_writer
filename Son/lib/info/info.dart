@@ -12,17 +12,12 @@ class Info extends StatelessWidget {
           ListTile(
             leading: Icon(Icons.info),
             title: ThemeText1(
-              text:
-              'Sổ tay sinh viên',
+              text: 'Sổ tay sinh viên',
             ),
           ),
           SizedBox(height: 16.0),
-          ThemeText1(text:
-            'Mô tả:',
-          ),
-          ThemeText(text:
-            'Đây là phiên bản thử nghiệm đầu tiên dành cho sinh viên Đại Học Thủ Dầu một',
-          ),
+          ThemeText1(text: 'Mô tả:',),
+          ThemeText( text:'Đây là phiên bản thử nghiệm đầu tiên dành cho sinh viên Đại Học Thủ Dầu một',),
           // SizedBox(height: 16.0),
           // Text(
           //   'Key Features:',
@@ -53,9 +48,9 @@ class Info extends StatelessWidget {
           // ),
           // Text('Android 6.0+'),
           // Text('iOS 10.0+'),
-           SizedBox(height: 16.0),
-          ThemeText1(text:
-            'Version:',
+          SizedBox(height: 16.0),
+          ThemeText1(
+            text: 'Version:',
           ),
           ListTile(
             title: Text('Version 1.0.0'),
@@ -81,10 +76,7 @@ class Info extends StatelessWidget {
           //   subtitle: Text('by Jane Smith'),
           // ),
           SizedBox(height: 16.0),
-          ThemeText1( text:
-            'Contact and Support:',
-
-          ),
+          ThemeText1(text: 'Contact and Support:',),
           ListTile(
             leading: Icon(Icons.email),
             title: Text('Email'),
@@ -106,6 +98,7 @@ class Info extends StatelessWidget {
     );
   }
 }
+
 class ThemeText1 extends StatelessWidget {
   final String text;
 

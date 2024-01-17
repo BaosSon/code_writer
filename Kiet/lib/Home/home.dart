@@ -31,19 +31,19 @@ class HomePage extends StatelessWidget {
               [
                 OptionCard(
                   icon: Icons.info,
-                  card_text: ThemeText(text: 'Thông tin của bạn'),
+                  card_text: ThemeText(text: 'Thông tin',size:20),
                 ),
                 OptionCard(
                   icon: Icons.grid_view,
-                  card_text: ThemeText(text:'Câu lạc bộ'),
+                  card_text: ThemeText(text:'Gợi ý',size:20),
                 ),
                 OptionCard(
-                  icon: Icons.location_on,
-                  card_text: ThemeText(text:'Địa điểm 1' ),
+                  icon: Icons.propane_tank,
+                  card_text: ThemeText(text:'Đề xuất' ,size:20),
                 ),
                 OptionCard(
-                  icon: Icons.location_on,
-                  card_text: ThemeText(text:'Địa điểm 2' ),
+                  icon: Icons.newspaper,
+                  card_text: ThemeText(text:'Mới nhất' ,size:20),
                 ),
               ],
             ),

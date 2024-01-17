@@ -14,13 +14,14 @@ final ThemeData Dark = ThemeData(
 
 class ThemeText extends StatelessWidget {
   final String text;
-  ThemeText({required this.text});
+  final double size;
+  ThemeText({required this.text,required this.size});
 
   @override
   Widget build(BuildContext context) {
     var settings = Provider.of<Settings>(context);
     TextStyle textStyle = TextStyle(
-      fontSize: settings.fontSize,
+      fontSize: size,
       color: Theme.of(context).colorScheme.onSurface,
     );
 

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../theme/theme.dart';
+import '../../theme/theme.dart';
 import 'style_CLB.dart';
 
 class Literature extends StatelessWidget {
@@ -49,7 +49,7 @@ class Literature extends StatelessWidget {
           // Short introduction
           Padding(
             padding: const EdgeInsets.all(8.0),
-            child:ThemeText(text:'Short introduction'),
+            child:ThemeText(text:'Short introduction', size: 20),
           ),
 
           // Activities
