@@ -11,6 +11,7 @@ class Navbar extends StatelessWidget {
       child: ListView(
         children: [
           UserAccountsDrawerHeader(
+            decoration: BoxDecoration(color: Color.fromARGB(255, 0, 183, 255),),
               accountName: Text('sổ tay sinh viên'),
               accountEmail: Text('Trường đại học thủ dầu một')),
           ListTile(
