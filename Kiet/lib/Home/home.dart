@@ -45,25 +45,25 @@ class _HomePageState extends State<HomePage> {
               OptionCard(
                 icon: Icons.facebook,
                 card_text: ThemeText(text: 'Website & facebook', size: 20),
-                color: Colors.yellow,
+                color: Colors.blue,
                 onTap: () => setState(() => _body = face(goHome: goHome)),
               ),
               OptionCard(
                 icon: Icons.info,
                 card_text: ThemeText(text: 'Cần lưu ý', size: 20),
-                color: Colors.red,
+                color: Colors.yellow,
                 onTap: () => setState(() => _body = Note(goHome: goHome)),
               ),
               OptionCard(
                 icon: Icons.propane_tank,
                 card_text: ThemeText(text: 'Chuẩn đầu ra', size: 20),
-                color: Colors.blue,
+                color: Colors.greenAccent,
                 onTap: () => setState(() => _body = check_out(goHome: goHome)),
               ),
               OptionCard(
-                icon: Icons.newspaper,
+                icon: Icons.note,
                 card_text: ThemeText(text: 'Những điều khác', size: 20),
-                color: Colors.green,
+                color: Colors.redAccent,
                 onTap: () => setState(() => _body = Note2(goHome: goHome)),
               ),
             ],
@@ -88,34 +88,3 @@ class _HomePageState extends State<HomePage> {
   }
 }
 
-class OptionCard extends StatelessWidget {
-  final IconData icon;
-  final ThemeText card_text;
-  final Color color;
-  final VoidCallback? onTap;
-  OptionCard({
-    required this.icon,
-    required this.card_text,
-    this.color = Colors.white,
-    this.onTap,
-  });
-  @override
-  Widget build(BuildContext context) {
-    return Card(
-      color: color,
-      child: InkWell(
-        onTap: onTap,
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Icon(
-              icon,
-              size: 48,
-            ),
-            card_text
-          ],
-        ),
-      ),
-    );
-  }
-}
