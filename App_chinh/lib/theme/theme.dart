@@ -15,7 +15,8 @@ final ThemeData Dark = ThemeData(
 class ThemeText extends StatelessWidget {
   final String text;
   final double size;
-  ThemeText({required this.text,required this.size});
+  final TextAlign align;
+  ThemeText({required this.text,required this.size, this.align=TextAlign.left});
 
   @override
   Widget build(BuildContext context) {
@@ -25,6 +26,35 @@ class ThemeText extends StatelessWidget {
       color: Theme.of(context).colorScheme.onSurface,
     );
 
-    return Text(text, style: textStyle);
+    return Text(text, style: textStyle, textAlign: align,);
+  }
+}
+// -----
+class OptionCard extends StatelessWidget {
+  final IconData? icon;
+  final ThemeText card_text;
+  final Color color;
+  final VoidCallback? onTap;
+  OptionCard({
+    this.icon,
+    required this.card_text,
+    this.color = Colors.white,
+    this.onTap,
+  });
+  @override
+  Widget build(BuildContext context) {
+    return Card(
+      color: color,
+      child: InkWell(
+        onTap: onTap,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Icon(icon,size: 48,),
+            card_text
+          ],
+        ),
+      ),
+    );
   }
 }
