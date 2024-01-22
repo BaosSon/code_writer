@@ -38,8 +38,7 @@ class _HomePageState extends State<HomePage> {
         ),
         SliverGrid(
           gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-            crossAxisCount: 2,
-          ),
+            crossAxisCount: 2,),
           delegate: SliverChildListDelegate(
             [
               OptionCard(
