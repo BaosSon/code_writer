@@ -15,7 +15,6 @@ class _MapState extends State<Map> {
   List<Widget> get pages => [
         Map_main(currentPageIndex: currentPageIndex),
         eat(currentPageIndex: currentPageIndex),
-        school_map(currentPageIndex: currentPageIndex),
       ];
 
   @override
@@ -60,7 +59,7 @@ class Map_main extends StatelessWidget {
       ),
 // ------
 GestureDetector(
-        onTap: () => currentPageIndex.value = 2,
+  onTap: () => Navigator.push(context, MaterialPageRoute(builder: (_) => school_map())),
         child: Card(
           child: ListTile(
             leading: bd(child: Image.asset('image/logo.jpg')),

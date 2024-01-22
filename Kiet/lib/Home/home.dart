@@ -43,25 +43,25 @@ class _HomePageState extends State<HomePage> {
             [
               OptionCard(
                 icon: Icons.facebook,
-                card_text: ThemeText(text: 'Website & facebook', size: 20),
+                card_text: ThemeText(text: 'Website & facebook', size: 20, align:TextAlign.center,),
                 color: Colors.blue,
                 onTap: () => setState(() => _body = face(goHome: goHome)),
               ),
               OptionCard(
                 icon: Icons.info,
-                card_text: ThemeText(text: 'Cần lưu ý', size: 20),
+                card_text: ThemeText(text: 'Cần lưu ý', size: 20,align:TextAlign.center,),
                 color: Colors.yellow,
                 onTap: () => setState(() => _body = Note(goHome: goHome)),
               ),
               OptionCard(
                 icon: Icons.propane_tank,
-                card_text: ThemeText(text: 'Chuẩn đầu ra', size: 20),
+                card_text: ThemeText(text: 'Chuẩn đầu ra', size: 20,align:TextAlign.center,),
                 color: Colors.greenAccent,
                 onTap: () => setState(() => _body = check_out(goHome: goHome)),
               ),
               OptionCard(
                 icon: Icons.note,
-                card_text: ThemeText(text: 'Những điều khác', size: 20),
+                card_text: ThemeText(text: 'Những điều khác', size: 20,align:TextAlign.center,),
                 color: Colors.redAccent,
                 onTap: () => setState(() => _body = Note2(goHome: goHome)),
               ),

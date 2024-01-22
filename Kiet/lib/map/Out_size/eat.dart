@@ -20,52 +20,29 @@ class eat extends StatelessWidget {
           title: Text('Eat')),
       body: ListView(
         children: <Widget>[
-          // Logo
-          Center(child: bd(child: Logo(imagePath: 'image/logo.jpg'))),
-
-          // Facebook
-          ListTile(
-            leading: Icon(Icons.facebook),
-            title: Text('Facebook'),
-            // onTap: () {
-
-            // },
+          button_List(
+            title: 'Con đường cổng 3',
+            description: 'Giá rẻ, đa dạng',
+            imageUrl: 'image/logo.jpg',
+            mapUrl: '',
           ),
-
-          // Contact number
-          ListTile(
-            leading: Icon(Icons.phone),
-            title: Text('Contact Number'),
-            subtitle: Text('Contact number'),
+          // -----
+          button_List(
+            title: 'Con đường cổng 4',
+            description: 'Có vài quán cơm',
+            imageUrl: 'image/logo.jpg',
+            mapUrl: '',
           ),
-
-          // Club leader
-          ListTile(
-            leading: Icon(Icons.person),
-            title: Text('Club Leader'),
-            subtitle: Text('Name of the club leader'),
+          // -----
+          button_List(
+            title: 'Cửa hàng tiền lợi',
+            description: 'Nên đợi lúc khuyến mãi',
+            imageUrl: 'image/logo.jpg',
+            mapUrl: '',
           ),
-
-          // Short introduction
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child:ThemeText(text:'Short introduction', size: 20),
-          ),
-
-          // Activities
-          ListTile(
-            title: Text('Activities'),
-            subtitle: Text('Description of activities'),
-          ),
-
-          // Achievements
-          ListTile(
-            title: Text('Achievements'),
-            subtitle: Text('Description of achievements'),
-          ),
+          // -----
         ],
       ),
     );
   }
 }
-

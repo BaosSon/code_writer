@@ -15,7 +15,8 @@ final ThemeData Dark = ThemeData(
 class ThemeText extends StatelessWidget {
   final String text;
   final double size;
-  ThemeText({required this.text,required this.size});
+  final TextAlign align;
+  ThemeText({required this.text,required this.size, this.align=TextAlign.left});
 
   @override
   Widget build(BuildContext context) {
@@ -25,7 +26,7 @@ class ThemeText extends StatelessWidget {
       color: Theme.of(context).colorScheme.onSurface,
     );
 
-    return Text(text, style: textStyle);
+    return Text(text, style: textStyle, textAlign: align,);
   }
 }
 // -----
