@@ -13,10 +13,20 @@ class bd extends StatelessWidget {
         border: Border.all(color: Colors.blue, width: 1.0),
         borderRadius: BorderRadius.circular(10),
       ),
-      child: child,
+      child: ClipRRect(
+        borderRadius: BorderRadius.circular(10),
+        child: AspectRatio(
+          aspectRatio: 1/1,
+          child: FittedBox(
+            child: child,
+            fit: BoxFit.cover,
+          ),
+        ),
+      ),
     );
   }
 }
+
 
 class Logo extends StatelessWidget {
   final String imagePath;

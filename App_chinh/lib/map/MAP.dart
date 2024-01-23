@@ -15,6 +15,8 @@ class _MapState extends State<Map> {
   List<Widget> get pages => [
         Map_main(currentPageIndex: currentPageIndex),
         eat(currentPageIndex: currentPageIndex),
+        Play(currentPageIndex: currentPageIndex),
+        Sport(currentPageIndex: currentPageIndex),
       ];
 
   @override
@@ -46,25 +48,48 @@ class Map_main extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-    body: ListView(children: <Widget>[
+        body: ListView(children: <Widget>[
       GestureDetector(
         onTap: () => currentPageIndex.value = 1,
         child: Card(
           child: ListTile(
-            leading: bd(child: Image.asset('image/logo.jpg')),
+            leading: bd(child:Image.asset('image/icon_eat.jpg')),
             title: Text('Chỗ ăn uống'),
             subtitle: Text('Có thực mới vực được đạo'),
           ),
         ),
       ),
 // ------
-GestureDetector(
-  onTap: () => Navigator.push(context, MaterialPageRoute(builder: (_) => school_map())),
+      GestureDetector(
+        onTap: () => Navigator.push(
+            context, MaterialPageRoute(builder: (_) => school_map())),
         child: Card(
           child: ListTile(
-            leading: bd(child: Image.asset('image/logo.jpg')),
+            leading: bd(child: Image.asset('image/icon_map.jpg')),
             title: Text('Sơ đồ trường'),
             subtitle: Text('Không thể lạc được'),
+          ),
+        ),
+      ),
+// ------
+GestureDetector(
+        onTap: () => currentPageIndex.value = 2,
+        child: Card(
+          child: ListTile(
+            leading: bd(child: Image.asset('image/icon_play.jpg')),
+            title: Text('Địa điểm giải trí'),
+            subtitle: Text('Có chơi có học'),
+          ),
+        ),
+      ),
+// ------
+      GestureDetector(
+        onTap: () => currentPageIndex.value = 3,
+        child: Card(
+          child: ListTile(
+            leading: bd(child: Image.asset('image/icon_sport.jpg')),
+            title: Text('Thể thao'),
+            subtitle: Text('Một bộ não khỏe mạnh, nằm trong một cơ thể tráng kiệt'),
           ),
         ),
       ),

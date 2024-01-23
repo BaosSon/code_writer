@@ -3,9 +3,9 @@ import 'package:flutter/widgets.dart';
 import '../../theme/theme.dart';
 import '../style_map.dart';
 
-class Play extends StatelessWidget {
+class Sport extends StatelessWidget {
   final ValueNotifier<int> currentPageIndex;
-  Play ({required this.currentPageIndex});
+  Sport ({required this.currentPageIndex});
 
   @override
   Widget build(BuildContext context) {
@@ -17,26 +17,26 @@ class Play extends StatelessWidget {
               currentPageIndex.value = 0;
             },
           ),
-          title: Text('Play')),
+          title: Text('Sport')),
       body: ListView(
         children: <Widget>[
           button_List(
-            title: 'Siêu thị',
-            description: '?',
+            title: 'Trung tâm văn hóa Phú Mĩ',
+            description: 'Đi học nữa',
             imageUrl: 'image/logo.jpg',
             mapUrl: '',
           ),
           // -----
           button_List(
-            title: 'Nhà sách Bình Minh',
-            description: 'Ngoài sách ra còn nhiều thứ khác',
+            title: 'Hồ bơi',
+            description: 'Xung quanh anh toàn là nước ê',
             imageUrl: 'image/logo.jpg',
             mapUrl: '',
           ),
           // -----
           button_List(
-            title: 'Nhà cũ',
-            description: 'Chắc ông hiểu ý tôi là gì :)',
+            title: 'Sân bóng',
+            description: 'Chưa rõ lắm',
             imageUrl: 'image/logo.jpg',
             mapUrl: '',
           ),
