@@ -58,6 +58,55 @@ class OptionCard extends StatelessWidget {
     );
   }
 }
+
+class button_List extends StatelessWidget {
+  final String title;
+  final String description;
+  final String imageUrl;
+  final String mapUrl;
+
+  button_List({
+    required this.title,
+    this.description = '',
+    this.imageUrl = '',
+    this.mapUrl = '',
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return ExpansionTile(
+      title: ThemeText(text: title, size: 20.0),
+      children: <Widget>[
+        Padding(
+          padding: EdgeInsets.all(10.0),
+          child: ListView(
+            shrinkWrap: true,
+            physics: NeverScrollableScrollPhysics(),
+            children: <Widget>[
+              if (imageUrl.isNotEmpty)
+                Container(
+                  width: 200.0,
+                  height: 200.0,
+                  child: Image.asset(imageUrl, fit: BoxFit.cover),
+                ),
+              if (description.isNotEmpty)
+                Padding(
+                  padding: const EdgeInsets.only(top: 10.0),
+                  child: ThemeText(text: description, size: 18.0),
+                ),
+              if (mapUrl.isNotEmpty)
+                Padding(
+                  padding: const EdgeInsets.only(top: 10.0),
+                  child: Text(mapUrl),
+                ),
+            ],
+          ),
+        ),
+      ],
+    );
+  }
+}
+
 // -----
 Color hex(String hexColor) {
   final hexCode = hexColor.replaceAll('#', '');

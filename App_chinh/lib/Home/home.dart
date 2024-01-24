@@ -2,8 +2,9 @@ import 'package:flutter/material.dart';
 import '../theme/theme.dart';
 import 'note.dart';
 import 'face.dart';
-import 'note2.dart';
+import '../map/MAP.dart';
 import 'check_out.dart';
+import 'note2.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
