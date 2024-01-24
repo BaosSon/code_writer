@@ -24,7 +24,39 @@ class Note extends StatelessWidget {
             title: 'Thông báo quan trọng',
             description:
 '''- Đa số thông tin, sự kiện quan trọng đều được gủi qua gmail trường cấp.
-- Hãy luôn theo dỗi gmail nhá''',
+- Hãy luôn theo dỗi gmail trường cấp nhá
+- Một số điều kiện ra trường yêu cầu theo dỗi facebook riêng (Chướng chỉ ngoại ngữ và kĩ năng xã hội)''',
+          ),
+          // -----
+          button_List(
+            title: 'Đăng kí môn học',
+            description:
+'''- Thường thì gần đến kì thi cuối kì, sẽ có thông báo đăng kí.
+- Các bạn nên xem kĩ thời gian được phép đăng kí
+- Xem những môn cần đăng kí ở website nhà trường, mục "Chương trình đào tạo"
+- Xem luôn giáo viên lớp đó có hãm hay không
+- Nhanh chân không hết lớp''',
+          ),
+          // -----
+          button_List(
+            title: 'Nghỉ phép và làm đơn',
+            description:
+'''- Trên website TDMU, ở mục "ĐĂNG KÝ GIẤY CHỨNG".
+- Mỗi môn học đều có một số lượng nghỉ phép nhất định (khoảng 20% số tiết học). Nếu nghỉ quá số lượng này, thì phải học lại''',
+          ),
+          // -----
+          button_List(
+            title: 'Xử lí công vụ',
+            description:
+'''- Các bạn hãy đến phòng "B-403" giải quyết
+- Nhớ đi giầy nha (không được dùng dép quai hậu)''',
+          ),
+          // -----
+          button_List(
+            title: 'Tiền',
+            description:
+'''- Mọi thắc mắc, vấn đề. Các bạn hãy đến "A1-Văn phòng" giải quyết
+- Nhớ đi giầy nha (không được dùng dép quai hậu)''',
           ),
           // -----
           button_List(
@@ -48,8 +80,8 @@ class Note extends StatelessWidget {
           button_List(
             title: 'Thẻ thư viện', 
             description: 
-'''Sẽ có một buổi học về thư viện trường. Nhưng phải đăng kí.
-Thẻ sinh viên đã bao gồm thẻ thư viên, chỉ sử dụng được sau khi tham gia khóa học thư viện'''),
+'''- Sẽ có một buổi học về thư viện trường. Nhưng phải đăng kí.
+- Thẻ sinh viên đã bao gồm thẻ thư viên, chỉ sử dụng được sau khi tham gia khóa học thư viện'''),
           // -----
         ],
       ),
