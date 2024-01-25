@@ -106,7 +106,6 @@ class button_List extends StatelessWidget {
     );
   }
 }
-
 // -----
 Color hex(String hexColor) {
   final hexCode = hexColor.replaceAll('#', '');

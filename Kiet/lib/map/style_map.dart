@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import '../theme/theme.dart';
 
 class bd extends StatelessWidget {
   final Widget child;
@@ -13,10 +12,20 @@ class bd extends StatelessWidget {
         border: Border.all(color: Colors.blue, width: 1.0),
         borderRadius: BorderRadius.circular(10),
       ),
-      child: child,
+      child: ClipRRect(
+        borderRadius: BorderRadius.circular(10),
+        child: AspectRatio(
+          aspectRatio: 1/1,
+          child: FittedBox(
+            child: child,
+            fit: BoxFit.cover,
+          ),
+        ),
+      ),
     );
   }
 }
+
 
 class Logo extends StatelessWidget {
   final String imagePath;
@@ -28,55 +37,6 @@ class Logo extends StatelessWidget {
       width: Width,
       height: Width,
       child: Image.asset(imagePath),
-    );
-  }
-}
-
-// -----
-class button_List extends StatelessWidget {
-  final String title;
-  final String description;
-  final String imageUrl;
-  final String mapUrl;
-
-  button_List({
-    required this.title,
-    this.description = '',
-    this.imageUrl = '',
-    this.mapUrl = '',
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return ExpansionTile(
-      title: ThemeText(text: title, size: 20.0),
-      children: <Widget>[
-        Padding(
-          padding: EdgeInsets.all(10.0),
-          child: ListView(
-            shrinkWrap: true,
-            physics: NeverScrollableScrollPhysics(),
-            children: <Widget>[
-              if (imageUrl.isNotEmpty)
-                Container(
-                  width: 200.0,
-                  height: 200.0,
-                  child: Image.asset(imageUrl, fit: BoxFit.cover),
-                ),
-              if (description.isNotEmpty)
-                Padding(
-                  padding: const EdgeInsets.only(top: 10.0),
-                  child: ThemeText(text: 'Mô tả: ' + description, size: 18.0),
-                ),
-              if (mapUrl.isNotEmpty)
-                Padding(
-                  padding: const EdgeInsets.only(top: 10.0),
-                  child: Text(mapUrl),
-                ),
-            ],
-          ),
-        ),
-      ],
     );
   }
 }

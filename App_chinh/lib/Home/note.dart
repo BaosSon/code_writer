@@ -23,15 +23,15 @@ class Note extends StatelessWidget {
           button_List(
             title: 'Thông báo quan trọng',
             description:
-'''- Đa số thông tin, sự kiện quan trọng đều được gủi qua gmail trường cấp.
+'''- Thông tin, sự kiện quan trọng đều được gửi qua gmail trường cấp.
 - Hãy luôn theo dỗi gmail trường cấp nhá
-- Một số điều kiện ra trường yêu cầu theo dỗi facebook riêng (Chướng chỉ ngoại ngữ và kĩ năng xã hội)''',
+- Một số điều kiện ra trường yêu cầu theo dỗi facebook và website riêng (Chướng chỉ ngoại ngữ và kĩ năng xã hội)''',
           ),
           // -----
           button_List(
             title: 'Đăng kí môn học',
             description:
-'''- Thường thì gần đến kì thi cuối kì, sẽ có thông báo đăng kí.
+'''- Thông báo đăng kí sẽ đến vào gần kì thi cuối kì
 - Các bạn nên xem kĩ thời gian được phép đăng kí
 - Xem những môn cần đăng kí ở website nhà trường, mục "Chương trình đào tạo"
 - Xem luôn giáo viên lớp đó có hãm hay không
