@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:untitled/theme/theme.dart';
 import 'style_map.dart';
 import 'In_size/list.dart';
 import 'Out_size/list.dart';
@@ -13,8 +14,9 @@ class _MapState extends State<Map> {
 
   List<Widget> get pages => [
         Map_main(currentPageIndex: currentPageIndex),
-        In_size(currentPageIndex: currentPageIndex),
-        Out_size(currentPageIndex: currentPageIndex),
+        eat(currentPageIndex: currentPageIndex),
+        Play(currentPageIndex: currentPageIndex),
+        Sport(currentPageIndex: currentPageIndex),
       ];
 
   @override
@@ -28,8 +30,8 @@ class _MapState extends State<Map> {
             transitionBuilder: (Widget child, Animation<double> animation) {
               return SlideTransition(
                 child: child,
-                position: animation.drive(
-                  Tween(begin: Offset(1.0, 0.0), end: Offset.zero)),
+                position: animation
+                    .drive(Tween(begin: Offset(1.0, 0.0), end: Offset.zero)),
               );
             },
             child: pages[currentPageIndex.value],
@@ -45,29 +47,53 @@ class Map_main extends StatelessWidget {
   Map_main({required this.currentPageIndex});
   @override
   Widget build(BuildContext context) {
-    return ListView(children: <Widget>[
+    return Scaffold(
+        body: ListView(children: <Widget>[
       GestureDetector(
         onTap: () => currentPageIndex.value = 1,
         child: Card(
           child: ListTile(
-            leading: bd(child: Image.asset('image/logo.jpg')),
-            title: Text('Trong trường'),
-            subtitle: Text('Để hiểu nơi mình học'),
+            leading: bd(child:Image.asset('image/icon_eat.jpg')),
+            title: Text('Chỗ ăn uống'),
+            subtitle: Text('Có thực mới vực được đạo'),
           ),
         ),
       ),
 // ------
       GestureDetector(
-        onTap: () => currentPageIndex.value = 2,
+        onTap: () => Navigator.push(
+            context, MaterialPageRoute(builder: (_) => school_map())),
         child: Card(
           child: ListTile(
-            leading: bd(child: Image.asset('image/logo.jpg')),
-            title: Text('Ngoài trường'),
-            subtitle: Text('Để hiểu nơi mình sống'),
+            leading: bd(child: Image.asset('image/icon_map.jpg')),
+            title: Text('Sơ đồ trường'),
+            subtitle: Text('Không thể lạc được'),
           ),
         ),
       ),
-
-    ]);
+// ------
+GestureDetector(
+        onTap: () => currentPageIndex.value = 2,
+        child: Card(
+          child: ListTile(
+            leading: bd(child: Image.asset('image/icon_play.jpg')),
+            title: Text('Địa điểm giải trí'),
+            subtitle: Text('Có chơi có học'),
+          ),
+        ),
+      ),
+// ------
+      GestureDetector(
+        onTap: () => currentPageIndex.value = 3,
+        child: Card(
+          child: ListTile(
+            leading: bd(child: Image.asset('image/icon_sport.jpg')),
+            title: Text('Thể thao'),
+            subtitle: Text('Một bộ não khỏe mạnh, nằm trong một cơ thể tráng kiệt'),
+          ),
+        ),
+      ),
+// ------
+    ]));
   }
 }

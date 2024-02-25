@@ -2,8 +2,9 @@ import 'package:flutter/material.dart';
 import '../theme/theme.dart';
 import 'note.dart';
 import 'face.dart';
-import 'note2.dart';
+import '../map/MAP.dart';
 import 'check_out.dart';
+import 'note2.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -44,25 +45,25 @@ class _HomePageState extends State<HomePage> {
               OptionCard(
                 icon: Icons.facebook,
                 card_text: ThemeText(text: 'Website & facebook', size: 20, align:TextAlign.center,),
-                color: Colors.blue,
+                color: Colors.blueAccent,
                 onTap: () => setState(() => _body = face(goHome: goHome)),
               ),
               OptionCard(
                 icon: Icons.info,
                 card_text: ThemeText(text: 'Cần lưu ý', size: 20,align:TextAlign.center,),
-                color: Colors.yellow,
+                color: hex('#F2C200'),
                 onTap: () => setState(() => _body = Note(goHome: goHome)),
               ),
               OptionCard(
                 icon: Icons.propane_tank,
                 card_text: ThemeText(text: 'Chuẩn đầu ra', size: 20,align:TextAlign.center,),
-                color: Colors.greenAccent,
+                color: hex('#4CAF50'),
                 onTap: () => setState(() => _body = check_out(goHome: goHome)),
               ),
               OptionCard(
                 icon: Icons.note,
                 card_text: ThemeText(text: 'Những điều khác', size: 20,align:TextAlign.center,),
-                color: Colors.redAccent,
+                color: hex('#F44336'),
                 onTap: () => setState(() => _body = Note2(goHome: goHome)),
               ),
             ],

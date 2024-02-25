@@ -12,20 +12,30 @@ class bd extends StatelessWidget {
         border: Border.all(color: Colors.blue, width: 1.0),
         borderRadius: BorderRadius.circular(10),
       ),
-      child: child,
+      child: ClipRRect(
+        borderRadius: BorderRadius.circular(10),
+        child: AspectRatio(
+          aspectRatio: 1/1,
+          child: FittedBox(
+            child: child,
+            fit: BoxFit.cover,
+          ),
+        ),
+      ),
     );
   }
 }
+
 
 class Logo extends StatelessWidget {
   final String imagePath;
   Logo({required this.imagePath});
   @override
   Widget build(BuildContext context) {
-    double Width = MediaQuery.of(context).size.width/2;
+    double Width = MediaQuery.of(context).size.width / 2;
     return Container(
-      width: Width ,
-      height: Width ,
+      width: Width,
+      height: Width,
       child: Image.asset(imagePath),
     );
   }
