@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../theme/theme.dart';
+import '../../theme/theme.dart';
 
 class Info extends StatelessWidget {
   @override
@@ -11,13 +11,13 @@ class Info extends StatelessWidget {
         children: [
           ListTile(
             leading: Icon(Icons.info),
-            title: ThemeText1(
-              text: 'Sổ tay sinh viên',
+            title: ThemeText(
+              text: 'Sổ tay sinh viên',size:18
             ),
           ),
           SizedBox(height: 16.0),
-          ThemeText1(text: 'Mô tả:',),
-          ThemeText( text:'Đây là phiên bản thử nghiệm đầu tiên dành cho sinh viên Đại Học Thủ Dầu một',),
+          ThemeText(text: 'Mô tả:',size:20),
+          ThemeText( text:'Đây là phiên bản thử nghiệm đầu tiên dành cho sinh viên Đại Học Thủ Dầu một',size:18),
           // SizedBox(height: 16.0),
           // Text(
           //   'Key Features:',
@@ -49,8 +49,8 @@ class Info extends StatelessWidget {
           // Text('Android 6.0+'),
           // Text('iOS 10.0+'),
           SizedBox(height: 16.0),
-          ThemeText1(
-            text: 'Version:',
+          ThemeText(
+            text: 'Version:',size: 18
           ),
           ListTile(
             title: Text('Version 1.0.0'),
@@ -76,45 +76,26 @@ class Info extends StatelessWidget {
           //   subtitle: Text('by Jane Smith'),
           // ),
           SizedBox(height: 16.0),
-          ThemeText1(text: 'Contact and Support:',),
-          ListTile(
-            leading: Icon(Icons.email),
-            title: Text('Email'),
-            subtitle: Text('support@example.com'),
-            onTap: () {
-              // Handle email contact
-            },
-          ),
-          ListTile(
-            leading: Icon(Icons.phone),
-            title: Text('Phone'),
-            subtitle: Text('+1 123-456-7890'),
-            onTap: () {
-              // Handle phone contact
-            },
-          ),
+          // ThemeText(text: 'Contact and Support:',size: 18),
+          // ListTile(
+          //   leading: Icon(Icons.email),
+          //   title: Text('Email'),
+          //   subtitle: Text('support@example.com'),
+          //   onTap: () {
+          //     // Handle email contact
+          //   },
+          // ),
+          // ListTile(
+          //   leading: Icon(Icons.phone),
+          //   title: Text('Phone'),
+          //   subtitle: Text('+1 123-456-7890'),
+          //   onTap: () {
+          //     // Handle phone contact
+          //   },
+          // ),
         ],
       ),
     );
   }
 }
 
-class ThemeText1 extends StatelessWidget {
-  final String text;
-
-  const ThemeText1({Key? key, required this.text}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Text(
-      text,
-      style: TextStyle(
-        fontSize: 18.0,
-        fontWeight: FontWeight.bold,
-        color: Theme.of(context).brightness == Brightness.light
-            ? Colors.black
-            : Colors.white,
-      ),
-    );
-  }
-}

@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import '../../theme/theme.dart';
-import 'style_CLB.dart';
+import '../style_map.dart';
 
-class Literature extends StatelessWidget {
+class eat extends StatelessWidget {
   final ValueNotifier<int> currentPageIndex;
-
-  Literature({required this.currentPageIndex});
+  eat({required this.currentPageIndex});
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +17,7 @@ class Literature extends StatelessWidget {
               currentPageIndex.value = 0;
             },
           ),
-          title: Text('Literature')),
+          title: Text('Eat')),
       body: ListView(
         children: <Widget>[
           // Logo
@@ -68,3 +68,4 @@ class Literature extends StatelessWidget {
     );
   }
 }
+

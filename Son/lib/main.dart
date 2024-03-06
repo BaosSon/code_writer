@@ -10,8 +10,7 @@ import 'appbar/navbar.dart';
 import 'setting/setting.dart';
 import 'theme/theme.dart';
 
-void main() =>
-    runApp(ChangeNotifierProvider(create: (_) => Settings(), child: MyApp()));
+void main() =>runApp(ChangeNotifierProvider(create: (_) => Settings(), child: MyApp()));
 
 class MyApp extends StatelessWidget {
   @override

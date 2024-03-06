@@ -26,7 +26,7 @@ class _MyBottomNavigationBarState extends State<MyBottomNavigationBar> {
         NavigationDestination(
           selectedIcon: Icon(Icons.map),
           icon: Icon(Icons.map_outlined),
-          label: 'Map',
+          label: 'Địa điểm',
         ),
         NavigationDestination(
           selectedIcon: Icon(Icons.people),

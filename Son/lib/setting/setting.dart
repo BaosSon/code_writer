@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-
+import 'contactus.dart';
 class Settings extends ChangeNotifier {
   bool isDarkTheme = false;
   double fontSize = 14.0;
@@ -24,8 +24,13 @@ class SettingsPage extends StatelessWidget {
       appBar: AppBar(title: Text('Settings')),
       body: ListView(
         children: [
-          SwitchListTile(title: Text('Dark Theme'), value: settings.isDarkTheme, onChanged: settings.toggleTheme),
-          ListTile(title: Text('Contact Us'), onTap: () {}),
+          SwitchListTile(title: Text('Dark Theme'), value: settings.isDarkTheme, onChanged: settings.toggleTheme, activeColor:Color.fromARGB(255, 0, 183, 255),),
+          ListTile(title: Text('Contact Us'), onTap: () {Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) => ContactUsPage(),
+            ),
+          );}),
         ],
       ),
     );
